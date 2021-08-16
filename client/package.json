@@ -1,7 +1,17 @@
 {
-  "name": "client",
+  "name": "sat4c-client",
   "version": "0.1.0",
-  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "lint": "standard | snazzy",
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test",
+    "eject": "react-scripts eject"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
   "dependencies": {
     "@material-ui/core": "^4.12.2",
     "@material-ui/icons": "^4.11.2",
@@ -16,13 +26,6 @@
     "react-redux": "^7.2.3",
     "react-router-dom": "^5.2.0",
     "react-scripts": "4.0.3"
-  },
-  "scripts": {
-    "lint": "standard | snazzy",
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
   },
   "eslintConfig": {
     "extends": "react-app"
