@@ -1,0 +1,21 @@
+LDAP:
+  BASE_DN: DC=example,DC=com
+  HOSTS:
+    - ad.example.com
+  GROUPS:
+    - example group
+  UPN: @example.com
+
+CUCM:
+  HOST: cucm.example.com
+  VERSION: 12.5
+  PROTOCOL: https
+  USER: cucm-axl-user
+  PASS: password
+
+LISTENING_PORT: 8080
+
+LOG_FILE: ./sat4c.log
+
+JWT:
+  SECRET: yoursupersecretjwtprivatekey
