@@ -1,0 +1,18 @@
+[Unit]
+Description= SAT:4C
+After=systemd-journald.socket basic.target system.slice
+
+[Service]
+ExecStart=/opt/sat4c/server/index.js > /opt/sat4c/syslog
+WorkingDirectory=/opt/sat4c/server/
+Restart=always
+StandardOutput=syslog
+StandardError=syslog
+SyslogIdentifier=sat4c
+User=sat4c
+Group=sat4c
+Environment=NODE_ENV=production
+ELinuxContext=system_u:system_r:httpd_t:s0-s0:c1
+
+[Install]
+WantedBy=multi-user.target
