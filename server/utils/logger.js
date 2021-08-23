@@ -33,7 +33,7 @@ export const logger = (req, { type = 'INFO', action, message = '' }) => {
 
   if (config.LOG_FILE) {
     // Write to log file
-    fs.appendFile(path.resolve(config.LOG_FILE), JSON.stringify(msg), (err) => { if (err) throw err })
+    fs.appendFile(path.resolve(config.LOG_FILE), JSON.stringify(`${msg}\n`), (err) => { if (err) throw err })
   }
 
   // TODO: add logging to syslog
