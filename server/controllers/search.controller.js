@@ -1,6 +1,14 @@
 import { logger } from '../utils/logger.js'
 import { searchService as service } from '../services/index.js'
 
+export const errorResponse = (err, req, res, next) => {
+  if (err) {
+    logger(req, { type: 'ERROR', action: 'SEARCH', message: err.message })
+
+    return res.status(401).json(err)
+  }
+}
+
 export const get = async (req, res) => {
   const { pattern } = req.params
 
@@ -18,5 +26,6 @@ export const get = async (req, res) => {
 }
 
 export default {
+  errorResponse,
   get
 }

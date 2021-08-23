@@ -4,10 +4,10 @@ import { lineController, searchController } from '../controllers/index.js'
 
 const router = Router()
 
-router.get('/lines/:pattern', passport.authenticate(['jwt'], { session: false, failWithError: true }), lineController.get)
-router.put('/lines/:pattern', passport.authenticate(['jwt'], { session: false, failWithError: true }), lineController.put)
+router.get('/lines/:pattern', passport.authenticate(['jwt'], { session: false, failWithError: true }), lineController.get, lineController.errorResponse)
+router.put('/lines/:pattern', passport.authenticate(['jwt'], { session: false, failWithError: true }), lineController.put, lineController.errorResponse)
 
-router.get('/search/:pattern', passport.authenticate(['jwt'], { session: false, failWithError: true }), searchController.get)
+router.get('/search/:pattern', passport.authenticate(['jwt'], { session: false, failWithError: true }), searchController.get, searchController.errorResponse)
 
 router.get('*', passport.authenticate(['jwt'], { session: false, failWithError: true }), (req, res) => { res.status(404).json({ message: 'Resource not found!' }) })
 

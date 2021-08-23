@@ -1,6 +1,14 @@
 import { logger } from '../utils/logger.js'
 import { lineService as service } from '../services/index.js'
 
+export const errorResponse = (err, req, res, next) => {
+  if (err) {
+    logger(req, { type: 'ERROR', action: 'LINE', message: err.message })
+
+    return res.status(401).json(err)
+  }
+}
+
 export const get = async (req, res) => {
   const { pattern } = req.params
 
@@ -39,6 +47,7 @@ export const put = async (req, res) => {
 }
 
 export default {
+  errorResponse,
   get,
   put
 }

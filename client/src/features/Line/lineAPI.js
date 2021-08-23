@@ -1,6 +1,6 @@
 const HOSTNAME = window.location.hostname
 const PROTOCOL = window.location.protocol
-const PORT = '8080'
+const PORT = window.location.port
 const TOKEN = () => { return localStorage.getItem('token') }
 
 export const get = async ({ number }, thunkAPI) => {
