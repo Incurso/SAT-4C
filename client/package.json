@@ -19,6 +19,7 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "jwt-decode": "^3.1.2",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
     "react-hook-form": "^7.11.1",
@@ -55,5 +56,6 @@
   "devDependencies": {
     "snazzy": "^9.0.0",
     "standard": "^16.0.3"
-  }
+  },
+  "proxy": "http://localhost:8080"
 }
