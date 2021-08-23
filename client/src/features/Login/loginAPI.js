@@ -1,6 +1,6 @@
 const HOSTNAME = window.location.hostname
 const PROTOCOL = window.location.protocol
-const PORT = '8080'
+const PORT = window.location.port
 
 export const login = async ({ username, password }, thunkAPI) => {
   try {
