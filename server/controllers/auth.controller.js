@@ -51,7 +51,7 @@ export const generateJWT = (req, res, next) => {
 
   res.json({
     ...user,
-    token: jwt.sign(user, config.JWT.SECRET, { expiresIn: '8h' })
+    token: jwt.sign(user, config.JWT.SECRET, { expiresIn: config.JWT.EXPIRESIN })
   })
 }
 
