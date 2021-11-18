@@ -3,7 +3,7 @@ import { ExitToApp, PhoneForwarded } from '@material-ui/icons'
 import { makeStyles } from '@material-ui/styles'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { clearState, fetchUser, navBarSelector } from './navBarSlice'
 
 const useStyles = makeStyles((theme) => ({
@@ -14,14 +14,14 @@ const useStyles = makeStyles((theme) => ({
 }))
 
 const NavBar = () => {
-  const history = useHistory()
+  const navigate = useNavigate()
   const dispatch = useDispatch()
   const { errorMessage, isFetching, isError, image, name } = useSelector(navBarSelector)
   const classes = useStyles()
 
   const handleLogout = () => {
     localStorage.removeItem('token')
-    history.push('/login')
+    navigate('/login')
   }
 
   useEffect(() => {
@@ -32,9 +32,9 @@ const NavBar = () => {
     if (isError) {
       dispatch(clearState())
       console.trace(isError)
-      history.push('/login')
+      navigate('/login')
     }
-  }, [dispatch, errorMessage, history, isError])
+  }, [dispatch, errorMessage, isError, navigate])
 
   return (
     <>
