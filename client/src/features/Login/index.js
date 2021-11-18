@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { useHistory } from 'react-router-dom'
+import { useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
 import { Box, Button, Container, TextField, Typography, useMediaQuery } from '@material-ui/core'
 import { makeStyles } from '@material-ui/core/styles'
@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
 const Login = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const dispatch = useDispatch()
-  const history = useHistory()
+  const navigate = useNavigate()
   const { register, handleSubmit } = useForm()
   const { isFetching, isSuccess, isError, errorMessage } = useSelector(loginSelector)
   const classes = useStyles()
@@ -47,9 +47,9 @@ const Login = () => {
 
     if (isSuccess) {
       dispatch(clearState())
-      history.push('/')
+      navigate('/')
     }
-  }, [dispatch, errorMessage, history, isError, isSuccess])
+  }, [dispatch, errorMessage, isError, isSuccess, navigate])
 
   return (
     <>
