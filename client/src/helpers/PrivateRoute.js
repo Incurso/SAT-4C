@@ -12,6 +12,8 @@ const tokenExpired = () => {
 
     if (decodedToken.exp * 1000 < new Date().getTime()) {
       window.localStorage.removeItem('token')
+
+      return null
     }
   }
 
