@@ -6,30 +6,36 @@
     "lint": "standard | snazzy",
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "test": "react-scripts test",
+    "test": "snyk test && react-scripts test",
     "eject": "react-scripts eject"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@material-ui/core": "^4.12.2",
-    "@material-ui/icons": "^4.11.2",
-    "@reduxjs/toolkit": "^1.5.1",
-    "@testing-library/jest-dom": "^5.14.1",
-    "@testing-library/react": "^12.1.0",
-    "@testing-library/user-event": "^13.2.1",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.14",
+    "@mui/lab": "^5.0.0-alpha.108",
+    "@mui/material": "^5.10.14",
+    "@mui/styles": "^5.10.14",
+    "@reduxjs/toolkit": "^1.9.0",
+    "@testing-library/jest-dom": "^5.16.5",
+    "@testing-library/react": "^13.4.0",
+    "@testing-library/user-event": "^14.4.3",
     "jwt-decode": "^3.1.2",
-    "react": "^17.0.2",
-    "react-dom": "^17.0.2",
-    "react-hook-form": "^7.11.1",
-    "react-hot-toast": "^2.0.0",
-    "react-redux": "^7.2.3",
-    "react-router-dom": "^5.2.0",
-    "react-scripts": "4.0.3"
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-hook-form": "^7.39.4",
+    "react-hot-toast": "^2.4.0",
+    "react-redux": "^8.0.5",
+    "react-router-dom": "^6.4.3",
+    "react-scripts": "^5.0.1"
   },
-  "eslintConfig": {
-    "extends": "react-app"
+  "devDependencies": {
+    "snazzy": "^9.0.0",
+    "snyk": "^1.1059.0",
+    "standard": "^17.0.0"
   },
   "browserslist": {
     "production": [
@@ -53,9 +59,6 @@
       "matchMedia"
     ]
   },
-  "devDependencies": {
-    "snazzy": "^9.0.0",
-    "standard": "^16.0.3"
-  },
-  "proxy": "http://localhost:8080"
+  "proxy": "http://localhost:8080",
+  "packageManager": "yarn@3.2.4"
 }

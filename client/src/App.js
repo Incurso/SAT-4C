@@ -1,11 +1,13 @@
 import React from 'react'
 import './App.css'
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom'
-import { CssBaseline, Paper, useMediaQuery } from '@material-ui/core'
-import { createTheme, ThemeProvider } from '@material-ui/core/styles'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
+//import { CssBaseline, Paper, useMediaQuery } from '@material-ui/core'
+//import { createTheme, ThemeProvider } from '@material-ui/core/styles'
+import { CssBaseline, Paper, useMediaQuery } from '@mui/material'
+import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Login from './features/Login'
 import Search from './features/Search'
-import { PrivateRoute } from './helpers/PrivateRoute'
+import { RequireAuth } from './helpers/RequireAuth'
 import NotFound from './features/NotFound'
 import Line from './features/Line'
 
@@ -48,12 +50,29 @@ function App () {
       <CssBaseline />
       <Paper style={{ flex: 1, borderRadius: 0 }}>
         <Router>
-          <Switch>
-            <Route exact component={Login} path='/login' />
-            <PrivateRoute exact component={Search} path='/' />
-            <PrivateRoute exact component={Line} path='/line/:number' />
+          <Routes>
+            <Route exact path='/login' element={<Login />} />
+
+            <Route
+              exact path='/'
+              element={
+                <RequireAuth>
+                  <Search />
+                </RequireAuth>
+              }
+            />
+
+            <Route
+              exact path='/line/:number'
+              element={
+                <RequireAuth>
+                  <Line />
+                </RequireAuth>
+              }
+            />
+
             <Route path='*' component={NotFound} />
-          </Switch>
+          </Routes>
         </Router>
       </Paper>
     </ThemeProvider>

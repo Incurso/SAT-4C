@@ -1,11 +1,11 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { Link, useHistory } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import { Box, Button, CircularProgress, Container, Table, TableBody, TableCell, TableHead, TableRow, TextField, useMediaQuery } from '@material-ui/core'
+import { Box, Button, CircularProgress, Container, Table, TableBody, TableCell, TableHead, TableRow, TextField, useMediaQuery } from '@mui/material'
 import { clearState, fetchSearchForPattern, searchSelector } from './searchSlice'
+import { makeStyles } from '@mui/styles'
 import toast from 'react-hot-toast'
-import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {
@@ -31,7 +31,7 @@ const useStyles = makeStyles((theme) => ({
 const Dashboard = () => {
   const prefersDarkMode = useMediaQuery('(prefers-color-scheme: dark)')
   const dispatch = useDispatch()
-  const history = useHistory()
+  const navigate = useNavigate()
   const { register, handleSubmit } = useForm()
   const { errorMessage, isError, isFetching, lines } = useSelector(searchSelector)
 
@@ -42,7 +42,7 @@ const Dashboard = () => {
       toast.error(errorMessage)
       dispatch(clearState())
     }
-  }, [dispatch, errorMessage, history, isError])
+  }, [dispatch, errorMessage, navigate, isError])
 
   const handleSearch = (pattern) => {
     dispatch(fetchSearchForPattern(pattern))
