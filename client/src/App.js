@@ -1,8 +1,6 @@
 import React from 'react'
 import './App.css'
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
-//import { CssBaseline, Paper, useMediaQuery } from '@material-ui/core'
-//import { createTheme, ThemeProvider } from '@material-ui/core/styles'
 import { CssBaseline, Paper, useMediaQuery } from '@mui/material'
 import { createTheme, ThemeProvider } from '@mui/material/styles'
 import Login from './features/Login'
