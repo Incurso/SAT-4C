@@ -16,11 +16,13 @@ export const RequireAuth = ({ children }) => {
   }
 
   return token
-    ? <>
+    ? (
+      <>
         <NavBar />
-        { children }
+        {children}
       </>
-    : <Navigate to={'/login'} />
+      )
+    : <Navigate to='/login' />
 }
 
 export default RequireAuth

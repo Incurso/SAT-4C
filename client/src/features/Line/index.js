@@ -4,7 +4,8 @@ import { useDispatch, useSelector } from 'react-redux'
 import { useParams } from 'react-router-dom'
 import { Controller, useForm } from 'react-hook-form'
 import { clearState, fetchLine, lineSelector, updateLine } from './lineSlice'
-import { Button, Container, makeStyles, TextField, Typography, useMediaQuery } from '@material-ui/core'
+import { Button, Container, TextField, Typography, useMediaQuery } from '@mui/material'
+import { makeStyles } from '@mui/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {

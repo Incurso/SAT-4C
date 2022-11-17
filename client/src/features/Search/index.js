@@ -2,10 +2,10 @@ import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { Link, useNavigate } from 'react-router-dom'
 import { useForm } from 'react-hook-form'
-import { Box, Button, CircularProgress, Container, Table, TableBody, TableCell, TableHead, TableRow, TextField, useMediaQuery } from '@material-ui/core'
+import { Box, Button, CircularProgress, Container, Table, TableBody, TableCell, TableHead, TableRow, TextField, useMediaQuery } from '@mui/material'
 import { clearState, fetchSearchForPattern, searchSelector } from './searchSlice'
+import { makeStyles } from '@mui/styles'
 import toast from 'react-hot-toast'
-import { makeStyles } from '@material-ui/styles'
 
 const useStyles = makeStyles((theme) => ({
   root: {

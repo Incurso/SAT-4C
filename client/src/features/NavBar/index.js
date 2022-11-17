@@ -1,17 +1,17 @@
-import { AppBar, Avatar, Box, CircularProgress, IconButton, Toolbar, Typography } from '@material-ui/core'
-import { ExitToApp, PhoneForwarded } from '@material-ui/icons'
-import { makeStyles } from '@material-ui/styles'
+import { AppBar, Avatar, Box, CircularProgress, IconButton, Toolbar, Typography } from '@mui/material'
+import { ExitToApp, PhoneForwarded } from '@mui/icons-material'
+import { makeStyles } from '@mui/styles'
 import { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import { clearState, fetchUser, navBarSelector } from './navBarSlice'
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles({
   title: {
     display: 'flex',
     flex: 1
   }
-}))
+})
 
 const NavBar = () => {
   const navigate = useNavigate()
