@@ -12186,7 +12186,7 @@ __metadata:
     react-router-dom: ^6.4.3
     react-scripts: ^5.0.1
     snazzy: ^9.0.0
-    snyk: ^1.1059.0
+    snyk: ^1.1060.0
     standard: ^17.0.0
   languageName: unknown
   linkType: soft
@@ -12470,12 +12470,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"snyk@npm:^1.1059.0":
-  version: 1.1059.0
-  resolution: "snyk@npm:1.1059.0"
+"snyk@npm:^1.1060.0":
+  version: 1.1060.0
+  resolution: "snyk@npm:1.1060.0"
   bin:
     snyk: bin/snyk
-  checksum: 6906f683391ff48599a3355ba51312a71b5e426306cb0bc3f6ac7bd7c1d7e14547581fb7e3cbf23c769c3033396a5a023af51f16e6693598f5278f14006d43cc
+  checksum: 3ece7443775896dfcb0355ac5f20ab52bc830fab53b49a36baa720e119758dd1db23b3f93b3e696d50bfe07ed00ec7d05795ccfbc3b462c00815e37b24bb811c
   languageName: node
   linkType: hard
 

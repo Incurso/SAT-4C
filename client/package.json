@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "snazzy": "^9.0.0",
-    "snyk": "^1.1059.0",
+    "snyk": "^1.1060.0",
     "standard": "^17.0.0"
   },
   "browserslist": {
