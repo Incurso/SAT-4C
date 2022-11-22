@@ -15,10 +15,10 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/icons-material": "^5.10.14",
-    "@mui/lab": "^5.0.0-alpha.108",
-    "@mui/material": "^5.10.14",
-    "@mui/styles": "^5.10.14",
+    "@mui/icons-material": "^5.10.15",
+    "@mui/lab": "^5.0.0-alpha.109",
+    "@mui/material": "^5.10.15",
+    "@mui/styles": "^5.10.15",
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -26,7 +26,7 @@
     "jwt-decode": "^3.1.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-hook-form": "^7.39.4",
+    "react-hook-form": "^7.39.5",
     "react-hot-toast": "^2.4.0",
     "react-redux": "^8.0.5",
     "react-router-dom": "^6.4.3",
@@ -34,7 +34,7 @@
   },
   "devDependencies": {
     "snazzy": "^9.0.0",
-    "snyk": "^1.1060.0",
+    "snyk": "^1.1061.0",
     "standard": "^17.0.0"
   },
   "browserslist": {

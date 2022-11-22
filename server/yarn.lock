@@ -5376,7 +5376,7 @@ __metadata:
     passport-ldapauth: ^3.0.1
     passport-local: ^1.0.0
     snazzy: ^9.0.0
-    snyk: ^1.1060.0
+    snyk: ^1.1061.0
     standard: ^17.0.0
     winston: ^3.8.2
     xml-js: ^1.6.11
@@ -5565,12 +5565,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"snyk@npm:^1.1060.0":
-  version: 1.1060.0
-  resolution: "snyk@npm:1.1060.0"
+"snyk@npm:^1.1061.0":
+  version: 1.1061.0
+  resolution: "snyk@npm:1.1061.0"
   bin:
     snyk: bin/snyk
-  checksum: 3ece7443775896dfcb0355ac5f20ab52bc830fab53b49a36baa720e119758dd1db23b3f93b3e696d50bfe07ed00ec7d05795ccfbc3b462c00815e37b24bb811c
+  checksum: 632ab38e9f5ae4278cd1206a7ccddc394deaca33599b05ce6ea048855ba8443fc7a0eb33b3970e774958ad3be25b9d911fbcda9ad80eab734e5b9e0305b7467c
   languageName: node
   linkType: hard
 
